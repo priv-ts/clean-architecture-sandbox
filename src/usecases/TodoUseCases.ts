@@ -7,4 +7,10 @@ export class TodoUseCases {
   getTodos(): Todo[] {
     return this.todoRepository.findAll();
   }
+
+  addTodo(title: string) {
+    const todo = new Todo(Date.now().toString(), title, false);
+    this.todoRepository.save(todo);
+    return todo;
+  }
 }

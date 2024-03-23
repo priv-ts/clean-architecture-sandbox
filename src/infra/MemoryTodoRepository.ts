@@ -7,4 +7,9 @@ export class MemoryTodoRepository implements ITodoRepository {
   findAll(): Todo[] {
     return this.todos;
   }
+
+  save(todo: Todo): string {
+    this.todos.push(todo);
+    return todo.id;
+  }
 }

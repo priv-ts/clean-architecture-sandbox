@@ -23,3 +23,9 @@
     - import文で`Could not find a declaration file for module express.`となる
     - req,resの型推論がされるためTypeScriptでもエラーが解消される
 - appからはusecaseを呼ぶこと
+  - usecaseでユーザー入力で受け取る引数と、usecase内部で値を生成/補完してオブジェクトを形成する
+- 実装の流れ
+  - (entity) -> interfaces -> infra(repository) -> usecases -> app(server)
+
+#### もや
+- apiのデバッグ、ブレークポイントの貼り方
