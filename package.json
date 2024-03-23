@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/priv-ts/clean-architecture-sandbox#readme",
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@types/node": "^20.11.30",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.3"
