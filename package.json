@@ -1,0 +1,21 @@
+{
+  "name": "clean-architecture-sandbox",
+  "version": "1.0.0",
+  "description": "## 実行 ```shell npx ts-node ./src/index.ts ```",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/priv-ts/clean-architecture-sandbox.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/priv-ts/clean-architecture-sandbox/issues"
+  },
+  "homepage": "https://github.com/priv-ts/clean-architecture-sandbox#readme"
+}
