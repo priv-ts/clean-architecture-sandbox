@@ -19,6 +19,13 @@ app.post('/todos', async (req, res) => {
   res.status(201).json(todo);
 });
 
+app.get('/todos/:id', async (req, res) => {
+  const { id } = req.params;
+  // 非同期呼び出しにしないときに空オブジェクトが返ってしまう(callbackにasyncを、usecaseの呼び出しにawaitを)
+  const todo = await todoUseCase.getTodo(id);
+  res.status(200).json(todo);
+})
+
 const PORT = 3001;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

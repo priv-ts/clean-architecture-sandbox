@@ -12,4 +12,9 @@ export class MemoryTodoRepository implements ITodoRepository {
     this.todos.push(todo);
     return todo.id;
   }
+
+  async findById(id: string): Promise<Todo | null> {
+    const todo = this.todos.find(todo => todo.id === id);
+    return todo || null;
+  }
 }

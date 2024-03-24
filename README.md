@@ -26,6 +26,15 @@
   - usecaseでユーザー入力で受け取る引数と、usecase内部で値を生成/補完してオブジェクトを形成する
 - 実装の流れ
   - (entity) -> interfaces -> infra(repository) -> usecases -> app(server)
+- path parameterは`req.params`で受け取る(`res.body`になっていないか)
 
 #### もや
 - apiのデバッグ、ブレークポイントの貼り方
+
+### Next
+- 一覧取得、登録、詳細、更新、削除
+  - 一覧取得でもPromiseを返すようにする
+- 依存性の注入
+- ログイン処理
+- テスト書く
+- Todoに何某かのプロパティを追加

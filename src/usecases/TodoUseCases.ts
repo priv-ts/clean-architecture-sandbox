@@ -13,4 +13,9 @@ export class TodoUseCases {
     this.todoRepository.save(todo);
     return todo;
   }
+
+  async getTodo(id: string): Promise<Todo | string> {
+    const todo = await this.todoRepository.findById(id);
+    return todo ?? 'not found';   // repository側ではnullを返してみたので、usecase側でnullをハンドリングする
+  }
 }
