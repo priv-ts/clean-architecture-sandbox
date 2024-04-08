@@ -18,4 +18,9 @@ export class TodoUseCases {
     const todo = await this.todoRepository.findById(id);
     return todo ?? 'not found';   // repository側ではnullを返してみたので、usecase側でnullをハンドリングする
   }
+
+  removeTodo(id: string) {
+    const todo = this.todoRepository.delete(id);
+    return todo ?? null;   // usecase側で{ id: hoge }の形で返却するためnullを返す
+  }
 }

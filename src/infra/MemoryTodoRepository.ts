@@ -17,4 +17,13 @@ export class MemoryTodoRepository implements ITodoRepository {
     const todo = this.todos.find(todo => todo.id === id);
     return todo || null;
   }
+
+  delete(id: string): string | null {
+    const todoIndex = this.todos.findIndex((todo) => todo.id === id);
+    if (todoIndex !== -1) {
+      this.todos.splice(todoIndex, 1)
+      return this.todos[todoIndex].id;
+    }
+    return null;
+  }
 }

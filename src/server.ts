@@ -26,7 +26,13 @@ app.get('/todos/:id', async (req, res) => {
   res.status(200).json(todo);
 })
 
-const PORT = 3001;
+app.delete('/todos/:id', async(req, res) => {
+  const { id } = req.params;
+  const todoId = todoUseCase.removeTodo(id);
+  res.status(200).send({id: todoId});
+})
+
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
