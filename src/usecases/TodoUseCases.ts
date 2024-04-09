@@ -23,4 +23,13 @@ export class TodoUseCases {
     const todo = this.todoRepository.delete(id);
     return todo ?? null;   // usecase側で{ id: hoge }の形で返却するためnullを返す
   }
+
+  async updateTodo(id: string, title: string, completed: boolean): Promise<Todo | null> {
+    const existingTodo = await this.todoRepository.findById(id);
+    if (!existingTodo) {
+      return null
+    }
+    const updatedTodo = new Todo(id, title, completed);
+    return this.todoRepository.update(id, updatedTodo);
+  }
 }

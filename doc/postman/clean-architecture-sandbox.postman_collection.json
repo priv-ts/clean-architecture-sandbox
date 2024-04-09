@@ -56,7 +56,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"c\"\n}",
+					"raw": "{\n    \"title\": \"a\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -109,6 +109,41 @@
 						{
 							"key": "id",
 							"value": "1712584503641"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "更新",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"p\",\n    \"completed\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/todos/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todos",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1712671361489"
 						}
 					]
 				}

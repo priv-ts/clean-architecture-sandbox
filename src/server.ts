@@ -30,7 +30,14 @@ app.delete('/todos/:id', async(req, res) => {
   const { id } = req.params;
   const todoId = todoUseCase.removeTodo(id);
   res.status(200).send({id: todoId});
-})
+});
+
+app.put('/todos/:id', async (req, res) => {
+  const { title, completed } = req.body;
+  const { id } = req.params;
+  const todo = await todoUseCase.updateTodo(id, title, completed)
+  res.status(200).json(todo);
+});
 
 const PORT = 3000;
 app.listen(PORT, () => {

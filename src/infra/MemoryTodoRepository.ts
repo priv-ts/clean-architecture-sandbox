@@ -26,4 +26,13 @@ export class MemoryTodoRepository implements ITodoRepository {
     }
     return null;
   }
+
+  async update(id: string, updatedTodo: Todo): Promise<Todo | null> {
+    const todoIndex = this.todos.findIndex((todo) => todo.id === id);
+    if (todoIndex === -1) {
+      return null;
+    }
+    this.todos[todoIndex] = updatedTodo;
+    return updatedTodo;
+  }
 }

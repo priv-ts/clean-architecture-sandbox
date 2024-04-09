@@ -1,7 +1,7 @@
 # clean-architecture-sandbox
 
 ## 実行
-- サーバーを起動する
+- サーバーを起動するq
   - `ts-node ./src/server.ts`
 - http://localhost:3000/todos にアクセスする
 
@@ -40,8 +40,6 @@
   - [TypeError: Cannot read properties of undefined (reading '***')エラーを解決してみた](https://qiita.com/udonn/items/5e617210bfa75606c0fb)
 
 ### Next
-- 一覧取得*、登録*、詳細*、更新、削除*
-  - 一覧取得でもPromiseを返すようにする
 - 依存性の注入
   - [TSyringe で DI Container と Singleton](https://zenn.dev/optimisuke/articles/82b4f9bb1dfcc6)
   - [TypeScriptで依存性逆転の原則とDIとテスト](https://zenn.dev/optimisuke/articles/d13c5e206f5369)
